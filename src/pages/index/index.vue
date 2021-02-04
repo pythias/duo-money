@@ -1,19 +1,15 @@
 <template>
-  <view class="index">
-    <text>{{ msg }}</text>
-  </view>
+  <record-new />
 </template>
 
 <script>
 import { ref } from 'vue'
 import './index.scss'
+import RecordNew from '../../components/record/new.vue'
 
 export default {
-  setup () {
-    const msg = ref('Hello world')
-    return {
-      msg
-    }
+  components :{
+    'record-new' : RecordNew
   }
 }
 </script>
