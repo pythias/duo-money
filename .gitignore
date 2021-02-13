@@ -3,4 +3,5 @@ deploy_versions/
 .temp/
 .rn_temp/
 node_modules/
+.idea/
 .DS_Store

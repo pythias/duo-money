@@ -1,0 +1,9 @@
+/* pages/my-records/my-records.wxss */
+.record-list {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+.record-item {
+  margin: 10rpx;
+}

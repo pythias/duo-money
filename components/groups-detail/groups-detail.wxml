@@ -1,0 +1,9 @@
+<view class="page">
+    <view class="page__bd">
+        <mp-cells ext-class="my-cells" title="团队配置">
+            <mp-slideview wx:for="{{groups}}" wx:for-item="group" id="{{group.leader}}" buttons="{{slideButtons}}" bindbuttontap="slideButtonTap">
+                <mp-cell value="{{group.leader}} {{group.members}}人次" footer="{{ group.prepayments / 10000 }} 元"></mp-cell>
+            </mp-slideview>
+        </mp-cells>
+    </view>
+</view>

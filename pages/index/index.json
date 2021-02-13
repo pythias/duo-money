@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "多账本",
+  "usingComponents": {
+    "group-new": "../../components/group-new/group-new",
+    "groups-detail": "../../components/groups-detail/groups-detail",
+    "groups-result": "../../components/groups-result/groups-result"
+  }
+}

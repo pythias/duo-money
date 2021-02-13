@@ -1,0 +1,23 @@
+<mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+
+<view class="page">
+  <view class="page__bd">
+    <mp-form id="form" rules="{{rules}}" models="{{formData}}">
+      <mp-cells title="新增团队" footer="">
+        <mp-cell prop="leader" title="领队" ext-class="">
+          <input bindinput="formInputChange" type="text" bindconfirm="moveToMembers" auto-focus="true" focus="{{focusIndex == 'leader'}}" data-field="leader" class="weui-input" placeholder="请输入领队名称"/>
+        </mp-cell>
+        <mp-cell prop="members" title="人数" ext-class="">
+          <input bindinput="formInputChange" type="number" bindconfirm="moveToPrepayments" focus="{{focusIndex == 'members'}}" data-field="members" class="weui-input" placeholder="请输入团队人数"/>
+        </mp-cell>
+        <mp-cell prop="prepayments" title="预付款" ext-class="">
+          <input bindinput="formInputChange" type="digit" bindconfirm="onAddTapped" focus="{{focusIndex == 'prepayments'}}" data-field="prepayments" class="weui-input" placeholder="请输入预付款"/>
+        </mp-cell>
+      </mp-cells>
+    </mp-form>
+
+    <view class="weui-btn-area" style="margin-top: 8px !important;">
+      <button class="weui-btn" type="primary" disabled="{{ addButtonDisabled }}" bind:tap="onAddTapped">添加</button>
+    </view>
+  </view>
+</view>

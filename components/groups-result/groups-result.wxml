@@ -1,0 +1,7 @@
+<view class="page">
+    <view class="page__bd" style="padding-bottom:10px;">
+        <mp-cells ext-class="my-cells" title="计算结果" footer="总人数: {{result.members}}, 总款: {{ result.prepayments }} 元, 人均:{{ result.payment }} 元">
+            <mp-cell wx:for="{{result.patches}}" wx:for-item="patch" value="{{patch.from}} 付给 {{patch.to}}" footer="{{ patch.amount }} 元"></mp-cell>
+        </mp-cells>
+    </view>
+</view>
