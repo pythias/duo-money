@@ -11,8 +11,10 @@ Component({
       value: '',
       observer: function (newVal, oldVal) {
         const result = newVal.calculate();
+        this.triggerEvent('resultchanged', result);
         this.setData({
           result: result,
+          sendButtonDisabled: result.members === 0,
         });
       }
     },
@@ -23,10 +25,7 @@ Component({
    */
   data: {
     result: {},
-    slideButtons: [{
-      type: 'warn',
-      text: '删除',
-    }],
+    sendButtonDisabled: true,
   },
 
   /**

@@ -1,5 +1,5 @@
 <view class="container">
   <group-new record="{{record}}" bind:recordchanged="onRecordChanged"></group-new>
   <groups-detail record="{{record}}" bind:recordchanged="onRecordChanged"></groups-detail>
-  <groups-result record="{{record}}" bind:recordchanged="onRecordChanged"></groups-result>
+  <groups-result record="{{record}}" bind:resultchanged="onResultChanged"></groups-result>
 </view>

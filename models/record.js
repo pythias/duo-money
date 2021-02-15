@@ -4,6 +4,14 @@ class Group {
         this.members = parseInt(members);
         this.prepayments = parseFloat(prepayments) * 10000;
     }
+
+    toJSON() {
+        return {
+            leader: this.leader,
+            members: this.members,
+            prepayments: this.prepayments
+        };
+    }
 }
 
 class Record {
@@ -12,6 +20,10 @@ class Record {
         this.members = 0;
         this.prepayments = 0;
         this.groups = {};
+    }
+
+    getMembers = () => {
+        return this.members;
     }
 
     getGroups = () => {
@@ -95,8 +107,6 @@ class Record {
             }
         }
 
-        console.log(this.groups, patches, positiveGroups, negativeGroups);
-
         return {
             members: this.members,
             prepayments: (this.prepayments / 10000).toFixed(2),
@@ -109,10 +119,6 @@ class Record {
         const records = wx.getStorageSync('duo-records') || [];
         records.push(this);
         wx.setStorageSync('duo-records', records);
-    }
-
-    copy = () => {
-
     }
 }
 
